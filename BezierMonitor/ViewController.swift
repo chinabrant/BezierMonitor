@@ -20,6 +20,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet weak var secondMonitor: UIButton!
 
+    @IBAction func secondMonitorClicked(_ sender: Any) {
+        let vc = BezierMonitorViewController()
+        vc.order = .second
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func thirdMonitorClicked(_ sender: Any) {
+        let vc = BezierMonitorViewController()
+        vc.order = .third
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
